@@ -1,0 +1,57 @@
+/var/spool/slurm/d/job04350/slurm_script: line 13: /opt/intel/oneapi/intelpython/bin/activate: No such file or directory
+job start time is Thu Mar 12 07:42:43 EDT 2026
++ srun -N1 -n1 --cpu_bind=cores -l --nodelist=cn1 --cpus-per-task=2 singularity exec --nv -B /nfs-share-stgnode/home/663380266-5 --pwd /nfs-share-stgnode/home/663380266-5/ADV_Project /nfs-share-stgnode/containers/pytorch_25_04_py3.sif bash /nfs-share-stgnode/home/663380266-5/ADV_Project/run.sh
+0: GpuFreq=control_disabled
+0: INFO:    Converting SIF file to temporary sandbox...
+0: WARNING: underlay of /usr/bin/nvidia-smi required more than 50 (476) bind mounts
+0: 15:4: not a valid test operator:  
+0: 15:4: not a valid test operator: 12.9
+0: 21:4: not a valid test operator: (
+0: 21:4: not a valid test operator: 525.125.06
+0: Starting Python script inside PyTorch container...
+0: CUDA Available: True
+0: GPU Model: NVIDIA H100 80GB HBM3
+0: [INFO] Device: cuda
+0: [INFO] GPU: NVIDIA H100 80GB HBM3
+0: [INFO] Pre-training SourceCNN (White-box)...
+0: [INFO] Pre-training TransferVGG (Black-box 1)...
+0: [INFO] Pre-training TransferMLP (Black-box 2)...
+0: 
+0: [INFO] Training AdvGAN-G Generator for 100 epochs...
+0: [  1/100] D:0.047 GAN:0.844 Pert:4.9311 f_adv:-3.17
+0: [  5/100] D:0.000 GAN:0.933 Pert:5.4344 f_adv:-4.89
+0: [ 10/100] D:0.000 GAN:0.929 Pert:5.4630 f_adv:-5.25
+0: [ 15/100] D:0.000 GAN:0.927 Pert:5.4674 f_adv:-5.40
+0: [ 20/100] D:0.000 GAN:0.926 Pert:5.4795 f_adv:-5.51
+0: [ 25/100] D:0.000 GAN:0.947 Pert:5.4863 f_adv:-5.57
+0: [ 30/100] D:0.000 GAN:0.946 Pert:5.4785 f_adv:-5.62
+0: [ 35/100] D:0.000 GAN:0.944 Pert:5.4730 f_adv:-5.66
+0: [ 40/100] D:0.000 GAN:0.943 Pert:5.4677 f_adv:-5.69
+0: [ 45/100] D:0.000 GAN:0.941 Pert:5.4642 f_adv:-5.74
+0: [ 50/100] D:0.000 GAN:0.939 Pert:5.4575 f_adv:-5.84
+0: [ 55/100] D:0.000 GAN:0.936 Pert:5.4443 f_adv:-5.88
+0: [ 60/100] D:0.000 GAN:0.938 Pert:5.4410 f_adv:-5.89
+0: [ 65/100] D:0.000 GAN:0.938 Pert:5.4419 f_adv:-5.90
+0: [ 70/100] D:0.000 GAN:0.938 Pert:5.4430 f_adv:-5.90
+0: [ 75/100] D:0.000 GAN:0.940 Pert:5.4445 f_adv:-5.91
+0: [ 80/100] D:0.000 GAN:0.940 Pert:5.4451 f_adv:-5.92
+0: [ 85/100] D:0.000 GAN:0.940 Pert:5.4462 f_adv:-5.93
+0: [ 90/100] D:0.000 GAN:0.940 Pert:5.4458 f_adv:-5.93
+0: [ 95/100] D:0.000 GAN:0.940 Pert:5.4469 f_adv:-5.93
+0: [100/100] D:0.000 GAN:0.940 Pert:5.4471 f_adv:-5.93
+0: 
+0: ==================================================
+0:       EVALUATING TRANSFERABILITY (ASR %)
+0: ==================================================
+0: Target Model              | Attack Type     | ASR (%)
+0: -------------------------------------------------------
+0: SourceCNN                 | White-box       | 89.27%
+0: TransferVGG               | Black-box       | 76.25%
+0: TransferMLP               | Black-box       | 72.13%
+0: ==================================================
+0: 
+0: [INFO] Saving sample images for visualization...
+0: Python script finished.
+0: INFO:    Cleaning up image...
++ set +x
+job end time is Thu Mar 12 08:10:01 EDT 2026
