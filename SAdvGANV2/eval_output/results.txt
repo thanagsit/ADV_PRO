@@ -1,0 +1,6 @@
+Clean Accuracy : 98.35%
+Adv Accuracy   : 0.06%
+Attack Success : 98.29%
+Mean L-inf     : 0.3000
+Mean L2        : 0.8915
+Mean SSIM      : 0.9875
